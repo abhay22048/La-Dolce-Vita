@@ -144,6 +144,28 @@ window.addEventListener("load", autoSlide);
 
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  var video = document.getElementById("bg-video");
+
+  function tryToPlay() {
+      video.muted = true; // Ensure muted (important for autoplay)
+      video.play().then(() => {
+          console.log("Autoplay working!");
+      }).catch(error => {
+          console.log("Autoplay blocked, retrying...");
+          setTimeout(tryToPlay, 200); // Retry every 200ms if autoplay fails
+      });
+  }
+
+  tryToPlay(); // Try playing video
+});
+
+
+
+
+
+
+
 /**
  * PARALLAX EFFECT
  */

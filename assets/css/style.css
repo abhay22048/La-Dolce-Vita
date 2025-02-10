@@ -566,8 +566,8 @@ body.nav-active { overflow: hidden; }
   font-weight: var(--weight-bold);
   line-height: 1em;
   text-transform: uppercase;
-  letter-spacing: 16px;
-  padding-inline-start: 16px;
+  letter-spacing: 10px;
+  padding-inline-start: 10px;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -872,6 +872,37 @@ body.nav-active { overflow: hidden; }
   animation: sliderReveal 1s ease forwards;
 }
 
+
+
+.slider-bg {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-bg video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none; /* Ensure no interaction issue */
+}
+
+/* Hide any play button UI */
+video::-webkit-media-controls {
+  display: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+
+
+
+
 @keyframes sliderReveal {
   0% {
     transform: translateY(30px);
@@ -1001,7 +1032,132 @@ body.nav-active { overflow: hidden; }
   animation: rotate360 15s linear infinite;
 }
 
+/*-----------------------------------*\
+  #OPENING HOURS
+\*-----------------------------------*/
 
+/* 🔥 Opening Hours - Luxurious Black & Gold Theme 🔥 */
+.opening-hours {
+  padding: 60px 20px;
+  /* background-color: #121212; Deep black background */
+  color: #f8c978; /* Light golden text */
+  text-align: center;
+}
+
+/* 🏆 Section Title */
+.opening-hours .section-title {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color:white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+
+.opening-hours .section-title::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: #f8c978;
+  display: block;
+  margin: 10px auto;
+}
+
+/* 🎯 Grid Layout */
+.grid-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* 🛑 Card Styling */
+.open-hours-card {
+  /* background: rgba(255, 215, 0, 0.1); Transparent Gold */
+  border: 1px solid #f8c978;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.open-hours-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(248, 201, 120, 0.2);
+}
+
+/* 🔹 Centering H4 Titles */
+.open-hours-card .title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.open-hours-card .title-3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f8c978;
+  text-transform: uppercase;
+  border-bottom: 2px solid #f8c978;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: fit-content;
+}
+
+/* 🎨 Icons Styling */
+.open-hours-card .icon {
+  font-size: 1.5rem;
+  color: #f8c978;
+}
+
+/* 🏷️ Badge (Meal Type) Styling */
+.open-hours-card .badge {
+  background: #f8c978;
+  color: #121212;
+  font-size: 1rem;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* ⭐ Highlighted Timings - Aligned Properly */
+.card-text {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* 📌 Perfect Alignment for Icons & Text */
+.card-text i {
+  font-size: 1.3rem;
+  color: #f8c978;
+  width: 24px;
+  text-align: center;
+}
+
+/* 💡 Highlight the Timing */
+.card-text span.time {
+  background-color: rgba(248, 201, 120, 0.2);
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #f8c978;
+  font-size: 1.1rem;
+}
 
 
 
@@ -1116,8 +1272,6 @@ body.nav-active { overflow: hidden; }
   bottom: 0;
   right: 0;
 }
-
-
 
 
 
@@ -1447,6 +1601,7 @@ textarea.input-field {
   /**
    * CUSTOM PROPERTY
    */
+
 
   :root {
 

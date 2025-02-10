@@ -24,6 +24,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Forum&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
 
   <!-- 
     - custom css link
@@ -67,7 +69,8 @@
         </div>
 
         <span class="span">
-          Milton - Park Road
+          20 Park Road - Milton 
+
         </span>
       </address>
 
@@ -96,7 +99,7 @@
           <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
         </div>
 
-        <span class="span">info@ladolcevita.com.au</span>
+        <span class="span">info@ldv.com.au</span>
       </a>
 
     </div>
@@ -114,7 +117,7 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+        <img src="./assets/images/La Dolce Vita Logo.png" width="160" height="50" alt="LA Dolce Vita">
       </a>
 
       <nav class="navbar" data-navbar>
@@ -124,7 +127,7 @@
         </button>
 
         <a href="#" class="logo">
-          <img src="./assets/images/logo.svg" width="160" height="50" alt="Grilli - Home">
+          <img src="./assets/images/La Dolce Vita Logo.png" width="160" height="50" alt="Grilli - Home">
         </a>
 
         <ul class="navbar-list">
@@ -145,7 +148,7 @@
             </a>
           </li>
           <li class="navbar-item">
-            <a href="#menu" class="navbar-link hover-underline">
+            <a href="https://pay.yoello.com/v/ladolcevita" class="navbar-link hover-underline">
               <div class="separator"></div>
 
               <span class="span">Order online</span>
@@ -190,7 +193,7 @@
 
           <p class="body-4 navbar-text">Open: 6.30 am - 9.30pm</p>
 
-          <a href="mailto:booking@grilli.com" class="body-4 sidebar-link">info@ladolcevita.com.au</a>
+          <a href="mailto:info@ldv.com.au" class="body-4 sidebar-link">info@ldv.com.au</a>
 
           <div class="separator"></div>
 
@@ -238,11 +241,15 @@
           <li class="slider-item active" data-hero-slider-item>
 
             <div class="slider-bg">
-              <video width="1880" height="950" autoplay muted loop class="img-cover">
+              <video id="bg-video" autoplay muted loop playsinline class="img-cover">
                 <source src="./assets/videos/Hero-section.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
+            
+            
+            
+            
           
             <p class="label-2 section-subtitle slider-reveal">Tradational & Hygine</p>
           
@@ -267,11 +274,15 @@
           <li class="slider-item" data-hero-slider-item>
 
             <div class="slider-bg">
-              <video width="1880" height="950" autoplay muted loop class="img-cover">
+              <video id="bg-video" autoplay muted loop playsinline class="img-cover">
                 <source src="./assets/videos/Hero-section.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
+            
+            
+            
+            
 
             <p class="label-2 section-subtitle slider-reveal">delightful experience</p>
 
@@ -295,11 +306,14 @@
           <li class="slider-item" data-hero-slider-item>
 
             <div class="slider-bg">
-              <video width="1880" height="950" autoplay muted loop class="img-cover">
+              <video id="bg-video" autoplay muted loop playsinline class="img-cover">
                 <source src="./assets/videos/Hero-section.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
+            
+            
+            
 
             <p class="label-2 section-subtitle slider-reveal">amazing & delicious</p>
 
@@ -365,7 +379,7 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-1.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
+                    <img src="./assets/images/pizza.jpg" width="285" height="336" loading="lazy" alt="Breakfast"
                       class="img-cover">
                   </figure>
                 </a>
@@ -373,10 +387,37 @@
                 <div class="card-content">
 
                   <h3 class="title-4 card-title">
-                    <a href="#">Breakfast</a>
+                    <a href="#">Classic Italian Fare </a>
                   </h3>
+                 
+                  <p>Handcrafted pasta, wood-fired pizzas, and seasonal dishes made with locally sourced ingredients.</p>
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View Menu</a> -->
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                </div>
+                
+
+              </div>
+              
+            </li>
+
+            <li>
+              <div class="service-card">
+
+                <a href="#" class="has-before hover:shine">
+                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
+                    <img src="./assets/images/role.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                      class="img-cover">
+                  </figure>
+                </a>
+
+                <div class="card-content">
+
+                  <h3 class="title-4 card-title">
+                    <a href="#">On-Site Patisserie </a>
+                  </h3>
+                  <p>Baked cannoli, tiramisu, and French-inspired pastries paired with artisan coffee or Italian Hot Chocolate. </p>
+
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View Menu</a> -->
 
                 </div>
 
@@ -388,41 +429,19 @@
 
                 <a href="#" class="has-before hover:shine">
                   <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-2.jpg" width="285" height="336" loading="lazy" alt="Appetizers"
+                    <img src="./assets/images/lamp.jpg" width="285" height="336" loading="lazy" alt="Drinks"
                       class="img-cover">
                   </figure>
                 </a>
 
                 <div class="card-content">
 
-                  <h3 class="title-4 card-title">
-                    <a href="#">Appetizers</a>
+                  <h3 class="title-4 card-title ">
+                    <a href="#">Romantic Ambiance </a>
                   </h3>
+                  <p>Taste the Authentic Italian Flavors Under Australia’s Only Eiffel Tower</p>
 
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
-
-                </div>
-
-              </div>
-            </li>
-
-            <li>
-              <div class="service-card">
-
-                <a href="#" class="has-before hover:shine">
-                  <figure class="card-banner img-holder" style="--width: 285; --height: 336;">
-                    <img src="./assets/images/service-3.jpg" width="285" height="336" loading="lazy" alt="Drinks"
-                      class="img-cover">
-                  </figure>
-                </a>
-
-                <div class="card-content">
-
-                  <h3 class="title-4 card-title">
-                    <a href="#">Drinks</a>
-                  </h3>
-
-                  <a href="#" class="btn-text hover-underline label-2">View Menu</a>
+                  <!-- <a href="#" class="btn-text hover-underline label-2">View Menu</a> -->
 
                 </div>
 
@@ -454,17 +473,21 @@
 
             <p class="label-2 section-subtitle" id="about-label">Our Story</p>
 
-            <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2>
+            <!-- <h2 class="headline-1 section-title">Every Fla vor Tells a Story</h2> -->
 
             <p class="section-text">
-              Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the
-              industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled
-              it to make a type specimen book It has survived not only five centuries, but also the leap into.
+              Established in 1989, La Dolce Vita has been a beloved destination for 
+              authentic Italian cuisine in Milton, Brisbane. Nestled under Australia’s
+              only Eiffel Tower, our restaurant captures the charm of Italy with rich 
+              flavors, warm hospitality, and a passion for fine food. Whether you're 
+              here for a morning espresso, a long lunch, or a romantic dinner, we invite 
+              you to experience a slice of Italy in Brisbane.
+
             </p>
 
             <div class="contact-label">Book Through Call</div>
 
-            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+80 (400) 123 4567</a>
+            <a href="tel:+804001234567" class="body-1 contact-number hover-underline">+07 33681191</a>
 
             <a href="#" class="btn btn-primary">
               <span class="text text-1">Read More</span>
@@ -485,7 +508,7 @@
             </div>
 
             <div class="abs-img abs-img-2 has-before">
-              <img src="./assets/images/badge-2.png" width="133" height="134" loading="lazy" alt="">
+              <img src="./assets/images/1989-removebg-preview.png " width="133" height="134" loading="lazy" alt="">
             </div>
 
           </figure>
@@ -566,7 +589,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Greek Salad"
+                  <img src="./assets/images/menu-1.png" width="100" height="100" loading="lazy" alt="Breakfast Menu"
                     class="img-cover">
                 </figure>
 
@@ -574,12 +597,12 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Greek Salad</a>
+                      <a href="#" class="card-title">Breakfast Menu</a>
                     </h3>
 
-                    <span class="badge label-1">Seasonal</span>
+                    <!-- <span class="badge label-1">Seasonal</span>
 
-                    <span class="span title-2">$25.50</span>
+                    <span class="span title-2">$25.50</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -595,7 +618,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Lasagne"
+                  <img src="./assets/images/menu-2.png" width="100" height="100" loading="lazy" alt="Drinks Menu"
                     class="img-cover">
                 </figure>
 
@@ -603,10 +626,10 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Lasagne</a>
+                      <a href="#" class="card-title">Drinks Menu</a>
                     </h3>
 
-                    <span class="span title-2">$40.00</span>
+                    <!-- <span class="span title-2">$40.00</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -622,7 +645,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Butternut Pumpkin"
+                  <img src="./assets/images/menu-3.png" width="100" height="100" loading="lazy" alt="Lunch & Dinner Menu"
                     class="img-cover">
                 </figure>
 
@@ -630,10 +653,10 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Butternut Pumpkin</a>
+                      <a href="#" class="card-title">Lunch & Dinner Menu</a>
                     </h3>
 
-                    <span class="span title-2">$10.00</span>
+                    <!-- <span class="span title-2">$10.00</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -649,7 +672,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Tokusen Wagyu"
+                  <img src="./assets/images/menu-4.png" width="100" height="100" loading="lazy" alt="Beef/Reef Menu"
                     class="img-cover">
                 </figure>
 
@@ -657,12 +680,12 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Tokusen Wagyu</a>
+                      <a href="#" class="card-title">Beef/Reef Menu</a>
                     </h3>
 
-                    <span class="badge label-1">New</span>
+                    <!-- <span class="badge label-1">New</span>
 
-                    <span class="span title-2">$39.00</span>
+                    <span class="span title-2">$39.00</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -678,7 +701,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Olivas Rellenas"
+                  <img src="./assets/images/menu-5.png" width="100" height="100" loading="lazy" alt="Two-course meal Menu"
                     class="img-cover">
                 </figure>
 
@@ -686,10 +709,10 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Olivas Rellenas</a>
+                      <a href="#" class="card-title">Two-course meal Menu</a>
                     </h3>
 
-                    <span class="span title-2">$25.00</span>
+                    <!-- <span class="span title-2">$25.00</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -705,7 +728,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Opu Fish"
+                  <img src="./assets/images/menu-6.png" width="100" height="100" loading="lazy" alt="Dessert Menu"
                     class="img-cover">
                 </figure>
 
@@ -713,10 +736,10 @@
 
                   <div class="title-wrapper">
                     <h3 class="title-3">
-                      <a href="#" class="card-title">Opu Fish</a>
+                      <a href="#" class="card-title">Dessert Menu</a>
                     </h3>
 
-                    <span class="span title-2">$49.00</span>
+                    <!-- <span class="span title-2">$49.00</span> -->
                   </div>
 
                   <p class="card-text label-1">
@@ -729,11 +752,6 @@
             </li>
 
           </ul>
-
-          <p class="menu-text text-center">
-            During winter daily from <span class="span">7:00 pm</span> to <span class="span">9:00 pm</span>
-          </p>
-
           <a href="#" class="btn btn-primary">
             <span class="text text-1">View All Menu</span>
 
@@ -745,10 +763,136 @@
           <img src="./assets/images/shape-6.png" width="343" height="345" loading="lazy" alt="shape"
             class="shape shape-3 move-anim">
 
+
+
+          <!-- Opening hours section -->
+
+
+            <!-- <section class="section opening-hours" aria-label="opening-hours-label" id="opening-hours">
+              <h2 class="headline-1 section-title text-center">Opening Hours</h2>
+            
+              <div class="container">
+                <h2 class="section-title text-center">Restaurant
+                </h2>
+            
+            
+                <div class="grid-list">
+            
+            
+                  
+                  <div class="menu-card hover:card">
+            
+                    <div class="title-wrapper">
+                      <h4 class="title-3">Mon - Thu</h4>
+                    </div>
+                    <p class="card-text label-1"><span class="badge label-1">Lunch:</span> 11:30 am - 3:00 pm</p>
+                    <p class="card-text label-1"><span class="badge label-1">Dinner:</span> 5:00 pm - 9:00 pm</p>
+                  </div>
+
+                  <div class="menu-card hover:card">
+            
+                    <div class="title-wrapper">
+                      <h4 class="title-3">Fri - Sun</h4>
+                    </div>
+                    <p class="card-text label-1"><span class="badge label-1">BREAKFAST</span> 6:00 AM - 11:00 PM</p>
+                    <p class="card-text label-1"><span class="badge label-1">LUNCH</span> 11:30 AM - 3:00 PM</p>
+                    <p class="card-text label-1"><span class="badge label-1">DINNER</span> 5:00 PM - 9:00 PM</p>
+                  </div>          
+            
+            
+                </div>
+            
+            
+                <div class="container">
+                  <h2 class="section-title text-center">Cafe
+                  </h2>            
+                  <div class="grid-list">
+                    <div class="menu-card hover:card">            
+                      <div class="title-wrapper">
+                        <h4 class="title-3">Mon - Thu</h4>
+                      </div>
+                      <p class="card-text label-1">11:30 am - 9:30 pm
+                      </p>
+                     
+                    </div>
+
+                    <div class="menu-card hover:card">
+            
+                      <div class="title-wrapper">
+                        <h4 class="title-3">Fri - Sun</h4>
+                      </div>
+                      <p class="card-text label-1">6:00 am - 9:30 pm
+            
+                      </p>
+                     
+                    </div>
+                  </div>
+            
+            </section> -->
+
+
+            <section class="section opening-hours" aria-label="opening-hours-label" id="opening-hours">
+              <h2 class="headline-1 section-title">Opening Hours</h2>
+          
+              <div class="container">
+                  <h3 class="headline-1 section-title">Restaurant</h3>
+          
+                  <div class="grid-list">
+          
+                      <!-- Restaurant Section: Mon - Thu -->
+                      <div class="open-hours-card">
+                          <div class="title-wrapper">
+                              <i class="fa-solid fa-calendar icon"></i>
+                              <h4 class="title-3">Mon - Thu</h4>
+                          </div>
+                          <p class="card-text"><i class="fa-solid fa-utensils icon"></i> <span class="badge">Lunch:</span> <span class="time">11:30 AM - 3:00 PM</span></p>
+                          <p class="card-text"><i class="fa-solid fa-moon icon"></i> <span class="badge">Dinner:</span> <span class="time">5:00 PM - 9:00 PM</span></p>
+                      </div>
+          
+                      <!-- Restaurant Section: Fri - Sun -->
+                      <div class="open-hours-card">
+                          <div class="title-wrapper">
+                              <i class="fa-solid fa-calendar icon"></i>
+                              <h4 class="title-3">Fri - Sun</h4>
+                          </div>
+                          <p class="card-text"><i class="fa-solid fa-coffee icon"></i> <span class="badge">Breakfast:</span> <span class="time">6:00 AM - 11:00 AM</span></p>
+                          <p class="card-text"><i class="fa-solid fa-utensils icon"></i> <span class="badge">Lunch:</span> <span class="time">11:30 AM - 3:00 PM</span></p>
+                          <p class="card-text"><i class="fa-solid fa-moon icon"></i> <span class="badge">Dinner:</span> <span class="time">5:00 PM - 9:00 PM</span></p>
+                      </div>  
+                  </div>
+          
+                  <div class="container">
+                      <h2 class="section-title">Cafe</h2>
+                      
+                      <div class="grid-list">
+                          <!-- Cafe Section: Mon - Thu -->
+                          <div class="open-hours-card">
+                              <div class="title-wrapper">
+                                  <i class="fa-solid fa-calendar icon"></i>
+                                  <h4 class="title-3">Mon - Thu</h4>
+                              </div>
+                              <p class="card-text"><i class="fa-solid fa-clock icon"></i> <span class="time">11:30 AM - 9:30 PM</span></p>
+                          </div>
+          
+                          <!-- Cafe Section: Fri - Sun -->
+                          <div class="open-hours-card">
+                              <div class="title-wrapper">
+                                  <i class="fa-solid fa-calendar icon"></i>
+                                  <h4 class="title-3">Fri - Sun</h4>
+                              </div>
+                              <p class="card-text"><i class="fa-solid fa-clock icon"></i> <span class="time">6:00 AM - 9:30 PM</span></p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+          
+
+
+
+   
         </div>
       </section>
-
-
 
 
 
@@ -1107,20 +1251,20 @@
         <div class="footer-brand has-before has-after">
 
           <a href="#" class="logo">
-            <img src="./assets/images/logo.svg" width="160" height="50" loading="lazy" alt="grilli home">
+            <img src="./assets/images/La Dolce Vita Logo.png" width="160" height="50" loading="lazy" alt="grilli home">
           </a>
 
           <address class="body-4">
-            Restaurant St, Delicious City, London 9578, UK
+            20 Park Road, Milton 
           </address>
 
-          <a href="mailto:booking@grilli.com" class="body-4 contact-link">booking@grilli.com</a>
+          <a href="mailto:info@ldv.com.au" class="body-4 contact-link">info@ldv.com.au</a>
 
-          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : +88-123-123456</a>
+          <a href="tel:+88123123456" class="body-4 contact-link">Booking Request :+07 33681191</a>
 
-          <p class="body-4">
+          <!-- <p class="body-4">
             Open : 09:00 am - 01:00 pm
-          </p>
+          </p> -->
 
           <div class="wrapper">
             <div class="separator"></div>
