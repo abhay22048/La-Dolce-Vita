@@ -148,28 +148,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let video = document.getElementById("bg-video");
 
   function playVideo() {
-    video.muted = true; // Required for autoplay
+    video.muted = true; // Ensure it's muted (required for autoplay)
     video.setAttribute("muted", ""); // Extra safety
     video.setAttribute("playsinline", ""); // Required for iPhone
-    video.setAttribute("autoplay", ""); // Ensures autoplay is set
+    video.setAttribute("autoplay", ""); // Ensure autoplay is set
 
-    let playPromise = video.play();
-
-    if (playPromise !== undefined) {
-      playPromise.then(() => {
-        console.log("Video autoplaying successfully!");
-      }).catch(error => {
-        console.log("Autoplay blocked. Adding user interaction trigger...");
-        
-        // ✅ Add a forced play on first user interaction
-        document.body.addEventListener("touchstart", function () {
-          video.play();
-        }, { once: true }); // Runs only once
-      });
-    }
+    video.play().then(() => {
+      console.log("Video autoplaying successfully!");
+    }).catch(error => {
+      console.log("Autoplay blocked. Retrying...");
+      setTimeout(playVideo, 500); // Retry after 500ms
+    });
   }
 
-  // Force play when video can start
+  // Force play after video loads
   video.addEventListener("canplaythrough", playVideo);
 
   // If video is already loaded, play it
@@ -177,6 +169,9 @@ document.addEventListener("DOMContentLoaded", function () {
     playVideo();
   }
 });
+
+
+
 
 
 
