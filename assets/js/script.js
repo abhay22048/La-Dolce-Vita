@@ -145,20 +145,39 @@ window.addEventListener("load", autoSlide);
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  var video = document.getElementById("bg-video");
+  let video = document.getElementById("bg-video");
 
-  function tryToPlay() {
-      video.muted = true; // Ensure muted (important for autoplay)
-      video.play().then(() => {
-          console.log("Autoplay working!");
+  function playVideo() {
+    video.muted = true; // Required for autoplay
+    video.setAttribute("muted", ""); // Extra safety
+    video.setAttribute("playsinline", ""); // Required for iPhone
+    video.setAttribute("autoplay", ""); // Ensures autoplay is set
+
+    let playPromise = video.play();
+
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        console.log("Video autoplaying successfully!");
       }).catch(error => {
-          console.log("Autoplay blocked, retrying...");
-          setTimeout(tryToPlay, 200); // Retry every 200ms if autoplay fails
+        console.log("Autoplay blocked. Adding user interaction trigger...");
+        
+        // ✅ Add a forced play on first user interaction
+        document.body.addEventListener("touchstart", function () {
+          video.play();
+        }, { once: true }); // Runs only once
       });
+    }
   }
 
-  tryToPlay(); // Try playing video
+  // Force play when video can start
+  video.addEventListener("canplaythrough", playVideo);
+
+  // If video is already loaded, play it
+  if (video.readyState >= 3) {
+    playVideo();
+  }
 });
+
 
 
 

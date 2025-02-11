@@ -1953,6 +1953,7 @@ textarea.input-field {
   .about .container {
     grid-template-columns: 0.7fr 1fr;
     gap: 30px;
+    
   }
 
 
@@ -2249,6 +2250,11 @@ textarea.input-field {
     top: 46%;
     left: 0;
   }
+  .about {
+    background-color: #b07f54; /* Adding background color */
+    padding: 50px 0; /* Adjust padding if needed */
+  }
+  
 
 
 
