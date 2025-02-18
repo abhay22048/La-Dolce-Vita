@@ -413,6 +413,46 @@ body.nav-active { overflow: hidden; }
   gap: 40px;
 }
 
+/* Desktop View: 4 items in one row */
+#event .event-grid {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 20px !important; /* Space between cards */
+  justify-content: center !important;
+  list-style: none !important;
+  padding: 10px 0 !important;
+}
+
+/* Desktop: Each item takes 25% width (4 in a row) */
+#event .event-grid li {
+  flex: 1 1 calc(25% - 20px) !important; /* 4 items per row */
+  max-width: 350px !important;
+}
+
+/* Tablet View: 2 items in one row */
+@media (max-width: 1024px) {
+  #event .event-grid li {
+    flex: 1 1 calc(50% - 20px) !important; /* 2 items per row */
+  }
+}
+
+/* Mobile View: 1 item per row (Like a list) */
+@media (max-width: 768px) {
+  #event .event-grid {
+    display: block !important; /* Remove flex on mobile */
+  }
+
+  #event .event-grid li {
+    width: 100% !important; /* Full width */
+    max-width: none !important;
+    margin-bottom: 15px !important; /* Space between items */
+  }
+}
+
+
+
+
+
 .hover\:shine { position: relative; }
 
 .hover\:shine::after {
@@ -517,6 +557,9 @@ body.nav-active { overflow: hidden; }
 
 
 
+
+
+
 /*-----------------------------------*\
   #PRELOAD
 \*-----------------------------------*/
@@ -562,8 +605,11 @@ body.nav-active { overflow: hidden; }
 .preload .text {
   background-image: var(--loading-text-gradient);
   background-size: 500%;
-  font-size: calc(2rem + 3vw);
+  font-size: calc(2rem + 2vw);
   font-weight: var(--weight-bold);
+  font-family: 'Edwardian Script ITC', cursive;
+  
+
   line-height: 1em;
   text-transform: uppercase;
   letter-spacing: 10px;
@@ -578,6 +624,14 @@ body.nav-active { overflow: hidden; }
 @keyframes loadingText {
   0% { background-position: 100%; }
   100% { background-position: 0%; }
+}
+
+@font-face {
+  font-family: 'Edwardian Script ITC';
+  src: 
+       url('fonts/EdwardianScriptITC.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
@@ -786,7 +840,7 @@ body.nav-active { overflow: hidden; }
 
 .hero .slider-item {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
@@ -884,7 +938,7 @@ body.nav-active { overflow: hidden; }
 .slider-bg video {
   object-fit: cover;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   position: absolute;
   top: 0;
   left: 0;
@@ -1548,6 +1602,21 @@ textarea.input-field {
 }
 
 
+/* reservation footer social media  */
+
+.horizontal-list {
+  display: flex;
+  gap: 15px; /* Items ke beech gap */
+  list-style: none; /* Bullets hatane ke liye */
+  padding: 0;
+  justify-content: center; /* Center align */
+}
+
+.horizontal-list li {
+  display: inline;
+}
+
+
 
 
 
@@ -2149,8 +2218,8 @@ textarea.input-field {
   .hero { height: 880px; }
 
   .hero-btn {
-    bottom: 50px;
-    right: 50px;
+    bottom: 130px;
+    right: 60px;
     transform: scale(1);
   }
 
