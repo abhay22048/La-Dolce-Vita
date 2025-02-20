@@ -1745,7 +1745,7 @@ textarea.input-field {
    * HEADER
    */
 
-  .header { top: 51px; }
+  .header { top: 31px; }
 
   .header.active { top: 0; }
 
@@ -2218,7 +2218,7 @@ textarea.input-field {
   .hero { height: 880px; }
 
   .hero-btn {
-    bottom: 130px;
+    bottom: 200px;
     right: 60px;
     transform: scale(1);
   }
