@@ -319,10 +319,11 @@
           <ion-icon name="chevron-forward"></ion-icon>
         </button>
       
-        <a href="#reservation" class="hero-btn has-after">
+        <a href="#reservation" class="hero-btn has-after fixed-button">
           <img src="./assets/images/hero-icon.png" width="48" height="48" alt="booking icon">
           <span class="label-2 text-center span">Book A Table</span>
         </a>
+        
       
       </section>
       
@@ -665,7 +666,7 @@
               <div class="menu-card hover:card">
 
                 <figure class="card-banner img-holder" style="--width: 100; --height: 100;">
-                  <img src="./assets/images/Beef & Reef.png" width="100" height="100" loading="lazy" alt="Beef/Reef Menu"
+                  <img src="./assets/images/Beef.png" width="100" height="100" loading="lazy" alt="Beef/Reef Menu"
                     class="img-cover">
                 </figure>
 
@@ -1101,7 +1102,8 @@
                         </div>
     
                         <div class="card-content text-center">
-                            <p class="card-subtitle label-2" style="color: white;">Beef/Reef</p>
+                          <p class="card-subtitle label-2" style="color: white; font-size: 15px;">Beef/Reef</p>
+
                         </div>
                     </div>
                     <p class="card-title title-2 text-center" style="font-size: 16px; margin-top: 25px;">
@@ -1117,7 +1119,7 @@
                         </div>
     
                         <div class="card-content text-center">
-                            <p class="card-subtitle label-2" style="color: white;">2-Course Meal</p>
+                            <p class="card-subtitle label-2" style="color: white; font-size: 14px;">2-Course Meal</p>
                         </div>
                     </div>
                     <p class="card-title title-2 text-center" style="font-size: 16px; margin-top: 25px;">
@@ -1133,7 +1135,7 @@
                         </div>
     
                         <div class="card-content text-center">
-                            <p class="card-subtitle label-2" style="color: white;">Weekend Special</p>
+                            <p class="card-subtitle label-2" style="color: white; font-size: 12px;">Weekend Special</p>
                         </div>
                     </div>
                     <p class="card-title title-2 text-center" style="font-size: 16px; margin-top: 25px;">
@@ -1149,7 +1151,7 @@
                         </div>
     
                         <div class="card-content text-center">
-                            <p class="card-subtitle label-2" style="color: white;">Functions (Group Dining)</p>
+                            <p class="card-subtitle label-2" style="color: white; font-size: 13px;">Functions (Group Dining)</p>
                         </div>
                     </div>
                     <p class="card-title title-2 text-center" style="font-size: 16px; margin-top: 25px;">
@@ -1240,7 +1242,7 @@
 
           <p class="headline-2 testi-text">
             
-            “It's still one of our favourite places 30 years on. Thanks, Roberto”
+            “It's still one of our favourite places 30 years on. Thanks, Roberto”<br>
             - P Douglas.  </p>
 
           <!-- <div class="quote">”</div> -->
@@ -1253,10 +1255,10 @@
           </div>
 
           <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
+            <img src="./assets/images/fnctn.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
               class="img">
 
-            <p class="label-2 profile-name">Roberto - P Douglas
+            <p class="label-2 profile-name">
             </p>
           </div>
 
@@ -1270,68 +1272,101 @@
 
       <section class="reservation" id="reservation">
         <div class="container">
-
           <div class="form reservation-form bg-black-10">
-
+      
             <form action="" class="form-left">
-
-              <h2 class="headline-1 text-center"> Reservation</h2>
-
-              <div id="quandoo-booking-widget" style="width: 100%; height: 700px; display: flex; justify-content: center; align-items: center; text-align: center;">
+              <h2 class="headline-1 text-center">Reservation</h2>
+      
+              <!-- Quandoo Reservation Widget -->
+              <div class="quandoo-widget-builder" 
+                data-config='{
+                  "format":"text-button",
+                  "bgcolor":"#f5b016",
+                  "txcolor":"#ffffff",
+                  "round":"yes",
+                  "position":"",
+                  "font":"md",
+                  "merchant":57088,
+                  "txt":"Reserve now"
+                }'>
               </div>
-              <script 
-                  src="https://booking-widget.quandoo.com/index.js" 
-                  data-merchant-id="57088" 
-                  data-theme="light" 
-                  data-primary-color="#f5b016"
-                  defer>
-              </script>
-              
-
-
+              <script src="https://s3-eu-west-1.amazonaws.com/quandoo-website/widget-builder/quandoo-widget-builder.js"></script>
+      
+              <!-- Logo -->
+              <a href="#" class="logo">
+                <img src="./assets/images/La Dolce Vita white logo.png" width="250" height="60" alt="La Dolce Vita Logo">
+              </a>
+      
+              <!-- Social Links -->
+              <ul class="footer-list horizontal-list">
+                <li>
+                  <a href="https://www.facebook.com/LDVmilton" 
+                     class="label-2 footer-link hover-underline" target="_blank" rel="noopener">
+                     Facebook
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/ladolcevitamilton/" 
+                     class="label-2 footer-link hover-underline" target="_blank" rel="noopener">
+                     Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="https://maps.app.goo.gl/UmKKEJrQ7gTrbDJe8" class="label-2 footer-link hover-underline" target="_blank" rel="noopener">
+                    Google Map
+                  </a>
+                </li>
+              </ul>
+      
+              <!-- Tagline -->
+              <div class="restaurant-tagline">
+                <p class="copyright">
+                  &copy; AN ICONIC & CELEBRATED ITALIAN RESTAURANT SINCE 1989
+                </p>
+              </div>
             </form>
-
-            <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
-
+      
+            <!-- Contact Section -->
+            <div class="form-right text-center" 
+                 style="background-image: url('./assets/images/form-pattern.png')">
               <h2 class="headline-1 text-center">Contact Us</h2>
-
+      
               <p class="contact-label">Booking Request</p>
-
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">(07) 3368 1191</a>
-
+              <a href="tel:+61733681191" class="body-1 contact-number hover-underline">
+                (07) 3368 1191
+              </a>
+      
               <div class="separator"></div>
-
+      
               <p class="contact-label">Location</p>
-
               <address class="body-4">
-                12-14/20 Park Road Milton <br>
-                QLD 
+                12-14/20 Park Road, Milton <br> QLD
               </address>
-
-
-
+      
               <p class="contact-label">Breakfast Time</p>
-
               <p class="body-4">
-                Friday to Sunday <br>
-                6:00 AM - 11:00 AM
+                Friday to Sunday <br> 6:00 AM - 11:00 AM
               </p>
-
+      
               <p class="contact-label">Lunch Time</p>
-
               <p class="body-4">
-                Monday to Sunday <br>
-                11.30 AM - 3.00 PM
+                Monday to Sunday <br> 11:30 AM - 3:00 PM
               </p>
-
+      
               <p class="contact-label">Dinner Time</p>
-
               <p class="body-4">
-                Monday to Sunday <br>
-                05.00 PM - 09.00 PM
+                Monday to Sunday <br> 5:00 PM - 9:00 PM
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
-              <!-- <ul class="footer-list">
+
+
+
+<!-- <ul class="footer-list">
 
                 <li>
                   <a href="https://www.facebook.com/LDVmilton" class="label-2 footer-link hover-underline">Facebook</a>
@@ -1346,37 +1381,11 @@
                 </li>
       
               </ul> -->
-              <!-- <ul class="footer-list horizontal-list">
+               <!-- <ul class="footer-list horizontal-list">
                 <li><a href="https://www.facebook.com/LDVmilton" class="label-2 footer-link hover-underline">Facebook</a></li>
                 <li><a href="https://www.instagram.com/ladolcevitamilton/" class="label-2 footer-link hover-underline">Instagram</a></li>
                 <li><a href="#googlemap" class="label-2 footer-link hover-underline">Google Map</a></li>
               </ul>  -->
-
-            </div>
-            <div class="footer-bottom">
-<!-- 
-              <p class="copyright">
-                &copy; AN ICONIC & CELEBRATED ITALIAN RESTAURANT SINCE 1989
-                
-              </p>
-            
-            </div> -->
-            
-
-          </div>
-
-
-        
-
-
-
-        </div>
-      </section>
-
-
-
-
-
 
 
 

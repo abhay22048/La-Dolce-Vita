@@ -390,7 +390,7 @@ body.nav-active { overflow: hidden; }
 .has-before,
 .has-after {
   position: relative;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .has-before::before,
@@ -403,7 +403,7 @@ body.nav-active { overflow: hidden; }
   position: relative;
   padding-block: var(--section-space);
   overflow: hidden;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .bg-black-10 { background-color: var(--smoky-black-2); }
@@ -887,7 +887,7 @@ body.nav-active { overflow: hidden; }
 .hero .btn { margin-inline: auto; }
 
 .hero-btn {
-  position: absolute;
+  position: fixed;
   bottom: 15px;
   right: 15px;
   z-index: 2;
@@ -994,7 +994,7 @@ video::-webkit-media-controls-start-playback-button {
 .service-card .has-before {
   padding-block: 30px;
   margin-block-end: 26px;
-  z-index: 1;
+  /* z-index: 1; */
 }
 
 .service-card .has-before::before {
@@ -1618,6 +1618,204 @@ textarea.input-field {
 
 
 
+/* Scoped to the reservation section to avoid affecting other elements */
+/* Center align everything */
+.reservation .form-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Center and adjust the logo */
+.reservation .logo {
+  display: block;
+  margin: 20px auto;
+}
+
+.reservation .logo img {
+  max-width: 250px;
+  height: auto;
+}
+
+/* Styling the social links list */
+.reservation .footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spacing between links */
+  padding: 0;
+  margin-top: 15px;
+  list-style: none;
+}
+
+/* Social links styling */
+.reservation .footer-list li {
+  display: inline-block;
+}
+
+.reservation .footer-list .footer-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff; /* White color for better visibility */
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.reservation .footer-list .footer-link:hover {
+  color: #f5b016; /* Matching the reservation button color */
+  text-decoration: underline;
+}
+
+/* Ensuring the tagline is at the bottom */
+.reservation .restaurant-tagline {
+  margin-top: auto; /* Pushes it to the bottom */
+  text-align: center;
+  padding-top: 20px;
+}
+
+.reservation .restaurant-tagline p {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .reservation .footer-list {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+
+
+/* General Form Styling */
+.form-container .form-left {
+  background-color: #222; /* Dark background */
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 480px;
+  margin: 30px auto;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+  text-align: center;
+}
+
+/* Heading Styling */
+.heading-container .headline-1 {
+  font-size: 24px;
+  color: #f5b016;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Quandoo Widget Button */
+/* Center the reservation button */
+.reservation .quandoo-widget-builder {
+  display: flex;
+  justify-content: center; /* Centers it horizontally */
+  margin-top: 30px; /* Moves it down */
+}
+
+/* Styling the "Reserve Now" button */
+.reservation .quandoo-widget-builder button {
+  background-color: #f5b016 !important; /* Golden color */
+  color: #ffffff !important; /* White text */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px; /* Smooth rounded edges */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect for better interaction */
+.reservation .quandoo-widget-builder button:hover {
+  background-color: #d49a12 !important; /* Slightly darker gold */
+}
+
+
+/* Logo Styling */
+.logo-container .logo img {
+  max-width: 90%;
+  height: auto;
+  margin: 18px 0;
+  filter: brightness(0) invert(1); /* Makes it white */
+}
+
+/* Footer List Styling */
+/* Move the logo down */
+.reservation .logo {
+  display: block;
+  text-align: center;
+  margin-top: 50px; /* Increased top margin */
+}
+
+/* Move the social media links down */
+.reservation .footer-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 0;
+  margin-top: 25px; /* Increased top margin */
+  list-style: none;
+}
+
+/* Styling the social links */
+.reservation .footer-list .footer-link {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.reservation .footer-list .footer-link:hover {
+  color: #f5b016;
+  text-decoration: underline;
+}
+
+
+/* Copyright Text */
+.copyright-container .copyright {
+  font-size: 13px;
+  color: #bbb;
+  margin-top: 18px;
+}
+
+/* Restaurant Tagline */
+.tagline-container .restaurant-tagline {
+  font-size: 14px;
+  color: #f5b016;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .form-container .form-left {
+    padding: 20px;
+    max-width: 92%;
+  }
+
+  .heading-container .headline-1 {
+    font-size: 20px;
+  }
+
+  .footer-container .footer-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Add tagline at the bottom */
+
+
 
 
 /*-----------------------------------*\
@@ -2224,7 +2422,7 @@ textarea.input-field {
   .hero { height: 880px; }
 
   .hero-btn {
-    bottom: 200px;
+    bottom: 100px;
     right: 60px;
     transform: scale(1);
   }
